@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>איזה מצביע אתה</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="card" id="quizCard">
+      <div class="eyebrow">מבדק לא מדעי בכלל</div>
+      <h1>מי אתה בקלפי בעצם?</h1>
+      <p class="subtitle">7 שאלות שטותיות, תשובות חסרות אחריות, ותוצאה שבטוח תעצבן מישהו.</p>
+
+      <div id="quiz"></div>
+
+      <div class="actions">
+        <button id="submitBtn" class="primary">תן בראש, מה אני מצביע</button>
+      </div>
+    </section>
+
+    <section class="card result hidden" id="resultCard">
+      <div class="eyebrow">פסק הדין</div>
+      <h2 id="resultTitle"></h2>
+      <div class="partyBadge" id="partyBadge"></div>
+      <p id="resultText" class="resultText"></p>
+      <div class="shareRow">
+        <button id="restartBtn" class="secondary">לעשות מחדש</button>
+        <button id="shareBtn" class="primary">לשתף תוצאה</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
