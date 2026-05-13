@@ -1,74 +1,83 @@
 const questions = [
   {
-    text: 'מה אתה דופק על הבוקר?',
+    text: 'מה אתה שותה בבוקר?',
     options: [
-      { text: 'מאצ׳ה עם מבט שיפוטי', scores: { anti: 2, democrats: 2, yeshAtid: 1 } },
-      { text: 'קפה שחור וסיגריה של חרדה לאומית', scores: { likud: 2, benet: 1, shas: 1 } },
-      { text: 'נס קפה ועבודה, די עם השטויות', scores: { liberman: 2, zelecha: 2 } }
-    ]
-  },
-  {
-    text: 'מה קורה אצלך בטלוויזיה?',
-    options: [
-      { text: 'ערוץ 14 ברקע גם כשאני מתקלח', scores: { likud: 3, benGvir: 2 } },
-      { text: 'חדשות 12 ואז אני מתלונן שכולם גרועים', scores: { anti: 2, benet: 2, yeshAtid: 1 } },
-      { text: 'אין לי טלוויזיה, אני מעל הדבר הזה', scores: { democrats: 2, arab: 1, zelecha: 1 } }
-    ]
-  },
-  {
-    text: 'ציציות או ציצי?',
-    options: [
-      { text: 'ציציות אחי, ועוד בחוץ', scores: { haredi: 3, shas: 2 } },
-      { text: 'ציצי, מה השאלה בכלל', scores: { likud: 1, benGvir: 1, yeshAtid: 1 } },
-      { text: 'שכל אחד יעשה מה שבא לו ואני בעד מזגן', scores: { democrats: 2, anti: 1, arab: 1 } }
-    ]
-  },
-  {
-    text: 'שאלה כלכלית מפגרת, מה אתה מעדיף?',
-    options: [
-      { text: 'שהדירה תרד במחיר אבל רק אחרי שאני קונה', scores: { zelecha: 3, liberman: 1, benet: 1 } },
-      { text: 'שהכול יהיה יקר אבל עם ביטחון עצמי', scores: { likud: 2, benGvir: 2 } },
-      { text: 'שיפסיקו לבלבל את המוח ויורידו מיסים', scores: { zelecha: 2, liberman: 2, benet: 1 } }
-    ]
-  },
-  {
-    text: 'מישהו חתך אותך בכביש. מה אתה עושה?',
-    options: [
-      { text: 'מצפצף ואז שוכח מזה תוך 4 שניות', scores: { yeshAtid: 1, anti: 1, benet: 1 } },
-      { text: 'אומר שזה בגלל הפרקליטות', scores: { likud: 3 } },
-      { text: 'מסביר בקול על משילות', scores: { benGvir: 3, likud: 1 } }
-    ]
-  },
-  {
-    text: 'איזה משפט הכי שמאלני/ימני יוצא לך בלי לשים לב?',
-    options: [
-      { text: 'די כבר עם הכיבוש, אני רק רציתי קפה', scores: { democrats: 3, anti: 1, arab: 1 } },
-      { text: 'צריך להיכנס בהם, חד וחלק', scores: { benGvir: 3, likud: 1 } },
-      { text: 'אולי כולם יסתמו ונחזור לעבוד?', scores: { benet: 2, liberman: 2, zelecha: 1 } }
-    ]
-  },
-  {
-    text: 'מה הוייב שלך בוואטסאפ משפחתי?',
-    options: [
-      { text: 'שולח דגלים, אש ולה פמיליה', scores: { likud: 2, benGvir: 2 } },
-      { text: 'שולח לינק לכלכלן שאף אחד לא קרא', scores: { zelecha: 3, liberman: 1 } },
-      { text: 'כותב "בואו נישאר מכבדים" ואף אחד לא מקשיב', scores: { anti: 2, democrats: 1, yeshAtid: 1 } }
+      { text: 'מאצ׳ה', scores: { democrats: 3, anti: 2, yeshAtid: 1 } },
+      { text: 'קפה שחור', scores: { likud: 3, benGvir: 2, shas: 1 } },
+      { text: 'זירו', scores: { yeshAtid: 2, benet: 2, anti: 1 } },
+      { text: 'מים', scores: { benet: 1, yeshAtid: 1, liberman: 1, anti: 1 } }
     ]
   },
   {
     text: 'איפה אתה גר?',
     options: [
-      { text: 'תל אביב, אבל עם תלונות על קורקינטים', scores: { democrats: 2, anti: 2, yeshAtid: 1 } },
-      { text: 'יישוב קהילתי עם דשא, דגל וחרדה ביטחונית', scores: { benet: 2, likud: 2, benGvir: 1 } },
-      { text: 'לא משנה איפה, העיקר שיש חניה ולא יקר', scores: { liberman: 2, zelecha: 2, shas: 1 } }
+      { text: 'תל אביב, אבל מתלונן על קורקינטים', scores: { democrats: 3, anti: 2, yeshAtid: 1 } },
+      { text: 'רעננה/גבעתיים כזה מסודר', scores: { yeshAtid: 2, benet: 2, anti: 1 } },
+      { text: 'יישוב עם דגל על המרפסת', scores: { likud: 2, benet: 2, benGvir: 2 } },
+      { text: 'איפה שיש חניה וזול', scores: { liberman: 2, zelecha: 3, shas: 1 } }
     ]
   },
   {
-    text: 'מי אתה ביציאה בשישי?',
+    text: 'מה אתה רואה בטלוויזיה בלי להתבייש?',
     options: [
-      { text: 'דרינק קליל ואז מדבר על איחוי העם', scores: { benet: 3, yeshAtid: 1 } },
-      { text: 'לא יוצא, יש קידוש/ישיבה/לו״ז', scores: { haredi: 2, shas: 2 } },
-      { text: 'יוצא, מתלונן על המחירים, וחוזר עצבני', scores: { liberman: 2, zelecha: 2, anti: 1 } }
+      { text: 'ערוץ 14 ועוד אומר שזה הכי מאוזן', scores: { likud: 3, benGvir: 3 } },
+      { text: 'חדשות 12 ואז אומר שכולם מגמתיים', scores: { anti: 2, benet: 2, yeshAtid: 1 } },
+      { text: 'אין לי טלוויזיה, אני צורך רק פודקאסטים', scores: { democrats: 2, zelecha: 1, arab: 1 } },
+      { text: 'מה שיש, העיקר שלא יחפרו', scores: { liberman: 2, benet: 1 } }
+    ]
+  },
+  {
+    text: 'מה המשפט שיוצא לך אוטומטית?',
+    options: [
+      { text: 'די כבר עם הכיבוש אחי', scores: { democrats: 3, arab: 2, anti: 1 } },
+      { text: 'צריך להיכנס בהם', scores: { benGvir: 3, likud: 2 } },
+      { text: 'שיעזבו אותי ויורידו מיסים', scores: { zelecha: 3, liberman: 2, benet: 1 } },
+      { text: 'בואו נוריד רגע את הלהבות', scores: { yeshAtid: 2, benet: 2, anti: 1 } }
+    ]
+  },
+  {
+    text: 'מה אתה עושה כשחותכים אותך בכביש?',
+    options: [
+      { text: 'צופר ואז ממשיך, אין לי כוח', scores: { yeshAtid: 2, benet: 1, anti: 1 } },
+      { text: 'מסביר שזה בגלל בג״ץ', scores: { likud: 3, benGvir: 1 } },
+      { text: 'פותח חלון ונותן נאום על משילות', scores: { benGvir: 3, likud: 1 } },
+      { text: 'ממלמל על יוקר המחיה', scores: { zelecha: 2, liberman: 2 } }
+    ]
+  },
+  {
+    text: 'מה הוייב שלך בקבוצת וואטסאפ משפחתית?',
+    options: [
+      { text: 'שולח דגלים ואש ולה פמיליה', scores: { likud: 2, benGvir: 2 } },
+      { text: 'שולח לינק על ריכוזיות במשק', scores: { zelecha: 3, liberman: 1 } },
+      { text: 'כותב בואו נשמור על שיח מכבד', scores: { anti: 2, yeshAtid: 2, democrats: 1 } },
+      { text: 'לא קורא בכלל, מושתק ל־8 שנים', scores: { benet: 1, liberman: 1, haredi: 1 } }
+    ]
+  },
+  {
+    text: 'מה אתה לובש לים?',
+    options: [
+      { text: 'חולצת מחאה דהויה מקפלן', scores: { democrats: 3, anti: 2 } },
+      { text: 'דגל ישראל על הכתפיים בלי סיבה', scores: { likud: 2, benGvir: 2, benet: 1 } },
+      { text: 'משהו בסיסי, אני לא בא להצהיר', scores: { yeshAtid: 2, benet: 2 } },
+      { text: 'לא ים, רק מזגן', scores: { haredi: 1, shas: 1, zelecha: 1 } }
+    ]
+  },
+  {
+    text: 'מה הכי חשוב לך בכלכלה?',
+    options: [
+      { text: 'שהדירה תרד אחרי שקניתי', scores: { zelecha: 3, liberman: 1, benet: 1 } },
+      { text: 'שיפסיקו לתת לכולם ויעשו סדר', scores: { liberman: 3, zelecha: 1 } },
+      { text: 'שהמדינה תהיה חזקה וגם יקרה, בסדר', scores: { likud: 2, benGvir: 2 } },
+      { text: 'שיהיה פה נורמלי פשוט', scores: { yeshAtid: 2, anti: 2, benet: 1 } }
+    ]
+  },
+  {
+    text: 'מי אתה בשישי בערב?',
+    options: [
+      { text: 'דרינק ואז מדבר על איחוי העם', scores: { benet: 3, yeshAtid: 1 } },
+      { text: 'קידוש, משפחה, שקט', scores: { shas: 2, haredi: 2, likud: 1 } },
+      { text: 'יוצא ואז מתלונן על המחירים', scores: { liberman: 2, zelecha: 2, anti: 1 } },
+      { text: 'יושב עם חברים ומריץ בדיחות על הממשלה', scores: { democrats: 2, anti: 2, yeshAtid: 1 } }
     ]
   }
 ];
