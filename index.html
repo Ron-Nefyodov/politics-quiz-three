@@ -13,20 +13,30 @@
   <main class="app">
     <section class="card" id="quizCard">
       <div class="eyebrow">מבדק לא מדעי בכלל</div>
+      <div class="progressWrap">
+        <div class="progressMeta">
+          <span id="progressLabel">שאלה 1 מתוך 7</span>
+          <span id="progressPercent">14%</span>
+        </div>
+        <div class="progressBar"><div id="progressFill"></div></div>
+      </div>
       <h1>מי אתה בקלפי בעצם?</h1>
-      <p class="subtitle">7 שאלות שטותיות, תשובות חסרות אחריות, ותוצאה שבטוח תעצבן מישהו.</p>
+      <p class="subtitle">שאלה אחת בכל פעם. בלי לחץ, רק שיפוט פוליטי חמור.</p>
 
       <div id="quiz"></div>
 
       <div class="actions">
-        <button id="submitBtn" class="primary">תן בראש, מה אני מצביע</button>
+        <button id="backBtn" class="secondary hidden">שאלה קודמת</button>
+        <button id="nextBtn" class="primary">יאללה הבא</button>
       </div>
     </section>
 
     <section class="card result hidden" id="resultCard">
       <div class="eyebrow">פסק הדין</div>
       <h2 id="resultTitle"></h2>
-      <div class="partyBadge" id="partyBadge"></div>
+      <div class="partyBadge" id="partyBadge">
+        <img id="resultImage" alt="תמונת תוצאה" />
+      </div>
       <p id="resultText" class="resultText"></p>
       <div class="shareRow">
         <button id="restartBtn" class="secondary">לעשות מחדש</button>

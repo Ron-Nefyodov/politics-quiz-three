@@ -58,65 +58,121 @@ const questions = [
 ];
 
 const parties = {
-  likud: { name: 'הליכוד', emoji: '🍾', text: 'אתה ביבי גם אם אתה אומר שאתה רק "ימני עם שאלות". כנראה יש לך דעה על תקשורת, משפטנים ושרון גל.' },
-  benGvir: { name: 'עוצמה יהודית', emoji: '🚨', text: 'אתה חי על משילות, ענישה, ואפס סבלנות. הכביש, הטוויטר והמדינה, הכול מבחינתך צריך יד קשה.' },
-  benet: { name: 'בנט', emoji: '🪖', text: 'אתה רוצה ימין בלי כתבי אישום ובלי תיאטרון. מנכ״ליזם לאומי עם חולצת טי.' },
-  yeshAtid: { name: 'יש עתיד', emoji: '☕', text: 'אתה מאמין בנורמליות, מעמד ביניים, ולחיות בלי שיצעקו עליך כל היום בטלוויזיה.' },
-  democrats: { name: 'הדמוקרטים', emoji: '🪴', text: 'אתה עם וייב תל אביבי עצבני, זכויות, מוסדות, ותחושה שכל המדינה איבדה את זה.' },
-  shas: { name: 'ש״ס', emoji: '🕯️', text: 'יש אצלך מסורת, חמימות, ותחושת בטן יותר חזקה מכל פאנל חדשות.' },
-  haredi: { name: 'יהדות התורה', emoji: '🎩', text: 'פחות רעש, יותר רבנים. מבחינתך הפוליטיקה היא בעיקר מי לא יפריע לחיים שלך.' },
-  liberman: { name: 'ישראל ביתנו', emoji: '🥃', text: 'אתה קצר, עצבני, חילוני, ורוצה שמישהו כבר יעבוד מסודר בלי דרמות.' },
-  arab: { name: 'חד״ש-תע״ל / רע״ם', emoji: '🕊️', text: 'אתה מחוץ לבינגו של ערוץ 14 ומעדיף פרקטיקה, זכויות ושפיות על פני מופע צעקות.' },
-  zelecha: { name: 'זליכה', emoji: '📉', text: 'מבחינתך הכול זה עמלות, קרטלים, נדל"ן ומצגת אקסל שמישהו צריך סוף סוף לפתוח.' },
-  anti: { name: 'רק לא ביבי בע״מ', emoji: '🧯', text: 'אתה לא בטוח למי תצביע, אבל בטוח למי לא. קודם להחליף, אחר כך נסתדר.' }
+  likud: {
+    name: 'הליכוד',
+    image: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=1200&q=80',
+    text: 'אתה ביבי גם אם אתה אומר שאתה רק "ימני עם שאלות". כנראה יש לך דעה על תקשורת, משפטנים ושרון גל.'
+  },
+  benGvir: {
+    name: 'עוצמה יהודית',
+    image: 'https://images.unsplash.com/photo-1541872705-1f73c6400ec9?auto=format&fit=crop&w=1200&q=80',
+    text: 'אתה חי על משילות, ענישה, ואפס סבלנות. הכביש, הטוויטר והמדינה, הכול מבחינתך צריך יד קשה.'
+  },
+  benet: {
+    name: 'בנט',
+    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80',
+    text: 'אתה רוצה ימין בלי כתבי אישום ובלי תיאטרון. מנכ״ליזם לאומי עם חולצת טי.'
+  },
+  yeshAtid: {
+    name: 'יש עתיד',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=80',
+    text: 'אתה מאמין בנורמליות, מעמד ביניים, ולחיות בלי שיצעקו עליך כל היום בטלוויזיה.'
+  },
+  democrats: {
+    name: 'הדמוקרטים',
+    image: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=1200&q=80',
+    text: 'אתה עם וייב תל אביבי עצבני, זכויות, מוסדות, ותחושה שכל המדינה איבדה את זה.'
+  },
+  shas: {
+    name: 'ש״ס',
+    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1200&q=80',
+    text: 'יש אצלך מסורת, חמימות, ותחושת בטן יותר חזקה מכל פאנל חדשות.'
+  },
+  haredi: {
+    name: 'יהדות התורה',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=80',
+    text: 'פחות רעש, יותר רבנים. מבחינתך הפוליטיקה היא בעיקר מי לא יפריע לחיים שלך.'
+  },
+  liberman: {
+    name: 'ישראל ביתנו',
+    image: 'https://images.unsplash.com/photo-1507591064344-4c6ce005b128?auto=format&fit=crop&w=1200&q=80',
+    text: 'אתה קצר, עצבני, חילוני, ורוצה שמישהו כבר יעבוד מסודר בלי דרמות.'
+  },
+  arab: {
+    name: 'חד״ש-תע״ל / רע״ם',
+    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80',
+    text: 'אתה מחוץ לבינגו של ערוץ 14 ומעדיף פרקטיקה, זכויות ושפיות על פני מופע צעקות.'
+  },
+  zelecha: {
+    name: 'זליכה',
+    image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80',
+    text: 'מבחינתך הכול זה עמלות, קרטלים, נדל"ן ומצגת אקסל שמישהו צריך סוף סוף לפתוח.'
+  },
+  anti: {
+    name: 'רק לא ביבי בע״מ',
+    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80',
+    text: 'אתה לא בטוח למי תצביע, אבל בטוח למי לא. קודם להחליף, אחר כך נסתדר.'
+  }
 };
 
 const quizEl = document.getElementById('quiz');
-const submitBtn = document.getElementById('submitBtn');
 const resultCard = document.getElementById('resultCard');
 const quizCard = document.getElementById('quizCard');
 const resultTitle = document.getElementById('resultTitle');
 const resultText = document.getElementById('resultText');
-const partyBadge = document.getElementById('partyBadge');
+const resultImage = document.getElementById('resultImage');
 const restartBtn = document.getElementById('restartBtn');
 const shareBtn = document.getElementById('shareBtn');
+const nextBtn = document.getElementById('nextBtn');
+const backBtn = document.getElementById('backBtn');
+const progressLabel = document.getElementById('progressLabel');
+const progressPercent = document.getElementById('progressPercent');
+const progressFill = document.getElementById('progressFill');
 
-function renderQuiz() {
+let currentQuestion = 0;
+const answers = Array(questions.length).fill(null);
+
+function renderQuestion() {
+  const question = questions[currentQuestion];
+  const selectedAnswer = answers[currentQuestion];
+  const percent = Math.round(((currentQuestion + 1) / questions.length) * 100);
+
+  progressLabel.textContent = `שאלה ${currentQuestion + 1} מתוך ${questions.length}`;
+  progressPercent.textContent = `${percent}%`;
+  progressFill.style.width = `${percent}%`;
+  backBtn.classList.toggle('hidden', currentQuestion === 0);
+  nextBtn.textContent = currentQuestion === questions.length - 1 ? 'קבל את פסק הדין' : 'יאללה הבא';
+
   quizEl.innerHTML = '';
-  questions.forEach((question, qIndex) => {
-    const wrap = document.createElement('section');
-    wrap.className = 'question';
-    wrap.innerHTML = `<h3>${qIndex + 1}. ${question.text}</h3>`;
+  const wrap = document.createElement('section');
+  wrap.className = 'question';
+  wrap.innerHTML = `<h3>${question.text}</h3>`;
 
-    const options = document.createElement('div');
-    options.className = 'options';
+  const options = document.createElement('div');
+  options.className = 'options';
 
-    question.options.forEach((option, oIndex) => {
-      const label = document.createElement('label');
-      label.className = 'option';
-      label.innerHTML = `
-        <input type="radio" name="q${qIndex}" value="${oIndex}">
-        <span>${option.text}</span>
-      `;
-      label.addEventListener('click', () => {
-        options.querySelectorAll('.option').forEach((el) => el.classList.remove('selected'));
-        label.classList.add('selected');
-      });
-      options.appendChild(label);
+  question.options.forEach((option, oIndex) => {
+    const label = document.createElement('label');
+    label.className = `option ${selectedAnswer === oIndex ? 'selected' : ''}`;
+    label.innerHTML = `<span>${option.text}</span>`;
+    label.addEventListener('click', () => {
+      answers[currentQuestion] = oIndex;
+      renderQuestion();
     });
-
-    wrap.appendChild(options);
-    quizEl.appendChild(wrap);
+    options.appendChild(label);
   });
+
+  wrap.appendChild(options);
+  quizEl.appendChild(wrap);
 }
 
 function calculateResult() {
   const totals = {};
 
   for (let qIndex = 0; qIndex < questions.length; qIndex++) {
-    const picked = document.querySelector(`input[name="q${qIndex}"]:checked`);
-    if (!picked) return null;
-    const scores = questions[qIndex].options[Number(picked.value)].scores;
+    const answerIndex = answers[qIndex];
+    if (answerIndex === null) return null;
+    const scores = questions[qIndex].options[answerIndex].scores;
     Object.entries(scores).forEach(([key, value]) => {
       totals[key] = (totals[key] || 0) + value;
     });
@@ -126,25 +182,39 @@ function calculateResult() {
   return parties[winner] || parties.anti;
 }
 
-submitBtn.addEventListener('click', () => {
-  const result = calculateResult();
-  if (!result) {
-    alert('ענה על כל השאלות, אל תברח מהדמוקרטיה.');
+nextBtn.addEventListener('click', () => {
+  if (answers[currentQuestion] === null) {
+    alert('צריך לבחור תשובה לפני שממשיכים. גם בפוליטיקה אי אפשר רק להתלונן.');
     return;
   }
 
+  if (currentQuestion < questions.length - 1) {
+    currentQuestion += 1;
+    renderQuestion();
+    return;
+  }
+
+  const result = calculateResult();
   resultTitle.textContent = `יצא לך: ${result.name}`;
   resultText.textContent = result.text;
-  partyBadge.textContent = result.emoji;
+  resultImage.src = result.image;
+  resultImage.alt = result.name;
   quizCard.classList.add('hidden');
   resultCard.classList.remove('hidden');
 });
 
+backBtn.addEventListener('click', () => {
+  if (currentQuestion === 0) return;
+  currentQuestion -= 1;
+  renderQuestion();
+});
+
 restartBtn.addEventListener('click', () => {
-  document.querySelectorAll('input[type="radio"]').forEach((input) => (input.checked = false));
-  document.querySelectorAll('.option').forEach((el) => el.classList.remove('selected'));
+  currentQuestion = 0;
+  answers.fill(null);
   resultCard.classList.add('hidden');
   quizCard.classList.remove('hidden');
+  renderQuestion();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
@@ -164,4 +234,4 @@ shareBtn.addEventListener('click', async () => {
   setTimeout(() => { shareBtn.textContent = 'לשתף תוצאה'; }, 1600);
 });
 
-renderQuiz();
+renderQuestion();
