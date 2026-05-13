@@ -40,11 +40,27 @@ const questions = [
     ]
   },
   {
+    text: 'איזה משפט הכי שמאלני/ימני יוצא לך בלי לשים לב?',
+    options: [
+      { text: 'די כבר עם הכיבוש, אני רק רציתי קפה', scores: { democrats: 3, anti: 1, arab: 1 } },
+      { text: 'צריך להיכנס בהם, חד וחלק', scores: { benGvir: 3, likud: 1 } },
+      { text: 'אולי כולם יסתמו ונחזור לעבוד?', scores: { benet: 2, liberman: 2, zelecha: 1 } }
+    ]
+  },
+  {
     text: 'מה הוייב שלך בוואטסאפ משפחתי?',
     options: [
       { text: 'שולח דגלים, אש ולה פמיליה', scores: { likud: 2, benGvir: 2 } },
       { text: 'שולח לינק לכלכלן שאף אחד לא קרא', scores: { zelecha: 3, liberman: 1 } },
       { text: 'כותב "בואו נישאר מכבדים" ואף אחד לא מקשיב', scores: { anti: 2, democrats: 1, yeshAtid: 1 } }
+    ]
+  },
+  {
+    text: 'איפה אתה גר?',
+    options: [
+      { text: 'תל אביב, אבל עם תלונות על קורקינטים', scores: { democrats: 2, anti: 2, yeshAtid: 1 } },
+      { text: 'יישוב קהילתי עם דשא, דגל וחרדה ביטחונית', scores: { benet: 2, likud: 2, benGvir: 1 } },
+      { text: 'לא משנה איפה, העיקר שיש חניה ולא יקר', scores: { liberman: 2, zelecha: 2, shas: 1 } }
     ]
   },
   {
